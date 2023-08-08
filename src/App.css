@@ -1,0 +1,21 @@
+.app-layout{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+}
+.app-header{
+  height: 15vh;
+  background-color: rgb(242, 242, 242);
+}
+
+.app-footer{
+  height: 15vh;
+  background-color: rgb(228, 134, 134);
+}
+
+.app-main{
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+}
