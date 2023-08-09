@@ -1,13 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Home from "./pages/Home/Home"
+import HomeM from './pages/Home/HomeM'
 
 function App() {
 
   return (
-   <>
-    <Home/>
-   </>
+      <HomeM/>
   )
 }
 

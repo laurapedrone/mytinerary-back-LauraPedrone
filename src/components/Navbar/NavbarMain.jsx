@@ -1,43 +1,28 @@
-import React from 'react'
+import './navbarMain.css';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 const NavbarMain = () => {
     return (
-
-        <nav id="site-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #444141;">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                    aria-controls="offcanvasDarkNavbar">
-                    <span class="navbar-toggler-icon" data-bs-target="#offcanvasDarkNavbar"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" data-bs-hideresize="true" tabindex="-1"
-                    id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbar">
-                    <div class="offcanvas-header text-white" style="background-color: #444141;">
-                        <h5 class="offcanvas-title" id="offcanvasLabel">Amazing Events</h5>
-                        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body" style="background-color: #444141;">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./upcoming_events.html">Upcoming Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./past_events.html">Past Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./stats.html">Stats</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <Navbar expand="lg" className="bg-body-tertiary found" fixed="top">
+            <Container fluid>
+                <Navbar.Brand href="#">My Tinerary</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+                        <Nav.Link href="#action1">Home</Nav.Link>
+                        <Nav.Link href="#action2">Cyties</Nav.Link>
+                    </Nav>
+                    <Form className="d-flex">
+                        <Button variant="outline-info">Login</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
 
     )
 }
