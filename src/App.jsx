@@ -5,7 +5,9 @@ import HomeM from './pages/Home/HomeM'
 function App() {
 
   return (
+    <>
       <HomeM/>
+      </>
   )
 }
 
