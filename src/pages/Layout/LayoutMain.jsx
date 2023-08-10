@@ -1,4 +1,4 @@
-import HeroMain from '../../components/HeroMain/HeroMain'
+
 import NavbarMain from '../../components/Navbar/NavbarMain'
 import Footer from '../../components/Footer/Footer'
 import './layoutMain.css'
@@ -10,7 +10,7 @@ const LayoutMain = ({children}) => {
         <div>
             <header>
                 <NavbarMain />
-                <HeroMain />
+            
             </header>
             <main>
                 {children}
