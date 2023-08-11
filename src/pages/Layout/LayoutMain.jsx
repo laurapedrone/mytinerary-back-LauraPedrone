@@ -14,7 +14,7 @@ const LayoutMain = () => {
             <main>
                 <Outlet/>
             </main>
-            <footer className='background-footer'>
+            <footer>
                 <Footer />
             </footer>
 

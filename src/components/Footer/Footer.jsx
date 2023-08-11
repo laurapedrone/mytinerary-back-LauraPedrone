@@ -2,7 +2,7 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <div>
+        <div className='background-footer'>
             <p className='text'>MindHub AP MERN 08 - Laura Pedrone</p>
         </div>
     )
