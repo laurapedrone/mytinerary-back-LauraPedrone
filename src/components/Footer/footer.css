@@ -3,3 +3,11 @@
         color: whitesmoke;
 
 }
+
+.background-footer {
+        background-color: rgb(105, 105, 105) !important;
+      }
+
+p{
+        margin-bottom: 0rem;
+}

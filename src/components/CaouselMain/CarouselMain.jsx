@@ -8,7 +8,7 @@ const travel = cardsData.map(item => (<CardsTravelMain name={item.name} imageUrl
 const CarouselMain = () => {
     return (
         <section className='container'>
-            <h2 className="text-center">Popular My Tinerary</h2>
+            <h2 className="text-center">Popular MYTINERARIES!</h2>
             <Carousel showDots={true} responsive={responsive}>{travel}</Carousel>
         </section>
     )

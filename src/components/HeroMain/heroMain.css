@@ -1,0 +1,29 @@
+.paragraph_main {
+  text-align: center;
+  color: yellow;
+}
+
+.textsubtitle {
+  text-align: center;
+  color: whitesmoke;
+  font: bold 70px;
+  text-shadow: 1px 4px rgba(0, 0, 0, 0.445);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fund_main {
+  background-image: url(./public/Assets/images/mainImage.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-size: cover;
+  width: 100%;
+  min-height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 50px;
+}
