@@ -27,3 +27,39 @@
   gap: 1rem;
   margin: 0 0 50px;
 }
+
+.form-box {
+  position: relative;
+  width: 449px;
+  height: 331px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  h3 {
+    font-size: 20px !important;
+  }
+  .form-box {
+    position: relative;
+    width: 339px;
+    height: 281px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fund_main {
+    min-height: 415px;
+  }
+}

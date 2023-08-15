@@ -1,13 +1,10 @@
-.text{
-        text-align: center;
-        color: whitesmoke;
-
+.text-footer {
+  text-align: center;
+  color: whitesmoke;
+  background-color: #444141;
 }
 
-.background-footer {
-        background-color: rgb(105, 105, 105) !important;
-      }
-
-p{
-        margin-bottom: 0rem;
+.text-mytinerary {
+  color: rgb(30, 211, 218);
 }
+
