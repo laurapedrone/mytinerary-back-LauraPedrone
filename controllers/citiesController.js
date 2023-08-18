@@ -9,8 +9,11 @@ const citiesController = {
         });
       },
       getOneCity: async(request, response, next) => {
+        const {id} = request.params
+        const city = cities.find(city => city.id == id)
+
         response.json({
-          response: cities[0],
+          response: city,
           success: true,
           error: null,
         });

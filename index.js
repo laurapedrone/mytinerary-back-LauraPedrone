@@ -6,7 +6,7 @@ const server = express()
 server.use('/api',indexRouter)
 
 server.get('/',(request, response, next)=>{
-    response.send('Bienvenidos a mi servidor en /')
+    response.send('Bienvenidos a mi servidor')
 })
 
 
