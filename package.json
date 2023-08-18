@@ -1,0 +1,24 @@
+{
+  "name": "mytinerary-back",
+  "version": "1.0.0",
+  "description": "Mi aplicación de MyTinerary",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurapedrone/mytinerary-back-LauraPedrone.git"
+  },
+  "author": "Laura Pedrone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laurapedrone/mytinerary-back-LauraPedrone/issues"
+  },
+  "homepage": "https://github.com/laurapedrone/mytinerary-back-LauraPedrone#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
