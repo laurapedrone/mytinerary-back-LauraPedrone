@@ -1,5 +1,8 @@
+import 'dotenv/config.js'
 import express  from "express"
 import indexRouter from "./router/indexRouter.js"
+import cors from "cors"
+import './config/database.js'
 
 const server = express()
 
@@ -11,4 +14,4 @@ server.get('/',(request, response, next)=>{
 
 
 
-server.listen(3000, ()=>{console.log('Servidor corriendo en puerto 3000')})
+server.listen(process.env['PORT'], ()=>{console.log('Servidor corriendo en puerto ' + process.env['PORT'])})
