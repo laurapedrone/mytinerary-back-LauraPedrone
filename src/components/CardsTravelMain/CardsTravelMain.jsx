@@ -3,6 +3,7 @@ import './cardsTravelMain.css'
 
 const CardsTravelMain = (props) => {
     return (
+        
         <Card style={{ width: '12rem' }}>
             <Card.Img className='card-image'  variant="top" src={props.imageUrl} alt="City" />
             <Card.Body>

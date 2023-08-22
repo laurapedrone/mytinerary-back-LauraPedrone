@@ -3,6 +3,7 @@ import Footer from '../../components/Footer/Footer'
 import './layoutMain.css'
 import 'react-multi-carousel/lib/styles.css'
 import { Outlet } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 

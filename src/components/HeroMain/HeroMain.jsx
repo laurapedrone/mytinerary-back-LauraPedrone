@@ -1,7 +1,8 @@
 import React from 'react'
 import { Form, Button } from "react-bootstrap"
+import { LinkContainer } from 'react-router-bootstrap'
 import './heroMain.css'
-import { LinkContainer } from 'react-router-bootstrap';
+
 
 const HeroMain = () => {
   return (
@@ -12,7 +13,7 @@ const HeroMain = () => {
         <p className='paragraph_main'>Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier.</p>
         <Form className="d-flex">
           <LinkContainer to="/cities">
-            <Button  variant="outline-info">View More</Button>
+            <Button variant="outline-info">View More</Button>
           </LinkContainer>
         </Form>
 
