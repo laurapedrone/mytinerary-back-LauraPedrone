@@ -4,7 +4,7 @@ import './App.css'
 import HomeM from './pages/Home/HomeM'
 import LayoutMain from './pages/Layout/LayoutMain'
 import Cities from './pages/Cities/Cities'
-import CityDetail from './components/CityDetail/CityDetail'
+import CityDetail from './pages/CityDetail/CityDetail'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,6 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-
   return (
     <RouterProvider router={router} />
   )

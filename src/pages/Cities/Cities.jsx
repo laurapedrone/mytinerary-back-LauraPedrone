@@ -17,7 +17,6 @@ const Cities = () => {
   return (
     <>
       <section className="fund_main col-sm-12">
-
         <div className='form-box'>
           <h3 className="textsubtitle">Cities</h3>
           <p className='paragraph_main'>Collection of the most beautiful places and experience</p>

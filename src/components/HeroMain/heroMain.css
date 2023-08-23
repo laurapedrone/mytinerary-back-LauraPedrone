@@ -1,9 +1,9 @@
-.paragraph_main {
+.paragraph_main1 {
   text-align: center;
   color: yellow;
 }
 
-.textsubtitle {
+.textsubtitle1 {
   text-align: center;
   color: whitesmoke;
   font: bold 70px;
@@ -12,7 +12,7 @@
   text-transform: uppercase;
 }
 
-.fund_main {
+.fund_main1 {
   background-image: url(./public/Assets/images/mainImage.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -28,7 +28,7 @@
   margin: 0 0 50px;
 }
 
-.form-box {
+.form-box1 {
   position: relative;
   width: 449px;
   height: 331px;
@@ -46,7 +46,7 @@
   h3 {
     font-size: 20px !important;
   }
-  .form-box {
+  .form-box1 {
     position: relative;
     width: 339px;
     height: 281px;
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
   }
-  .fund_main {
+  .fund_main1 {
     min-height: 415px;
   }
 }
