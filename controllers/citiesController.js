@@ -20,27 +20,29 @@ const citiesController = {
       error: err;
       next(err);
     }
-    
   },
-  getOneCity: async (request, response, next) => {
-    let city;
+
+  
+  getOneCity: async (req, res, next) => {
+    const { id } = req.params
+    let cities;
     let error = null;
     let success = true;
-    const { id } = request.params;
+    try{
+      cities = await City.findOne({_id : id}, req.body, {new: true})
 
-    try {
-      city = await City.findById(id);
-    } catch (err) {
-      console.log(err);
+      res.json({
+        response: cities,
+        success,
+        error,
+      });
+    }catch(err){
       success: false;
       error: err;
+      next(err);
     }
-    response.json({
-      response: city,
-      success,
-      error,
-    });
   },
+
   createOneCity: async (request, response, next) => {
     console.log(request.body);
     let city;
@@ -59,14 +61,13 @@ const citiesController = {
       success: false;
       error: err;
     }
-
     response.json({
       response: city,
       success,
       error,
     });
   },
-  
+
   updateOneCity: async (req, res, next) => {
     const { id } = req.params
     let cities;

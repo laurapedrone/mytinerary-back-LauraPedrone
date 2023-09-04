@@ -12,7 +12,7 @@ server.use(express.json())
 
 server.use('/api',indexRouter)
 
-server.use('/api',(req,res,next)=>{
+server.use('/api/',(req,res,next)=>{
     console.log('Hicieron una petición a mi backend a la ruta', req.url, 'a la hora:',new Date().toLocaleString())
     console.log(req.method)
     next()

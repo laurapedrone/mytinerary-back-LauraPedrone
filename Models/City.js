@@ -5,8 +5,10 @@ const citySchema= Schema({
     country: {type: String, require: true},
     flag: {type: String, require: true},
     image: {type: String, require: true},
+    imageCover:{type: String},
     description: {type: String, require: true},
-    excursion_price: {type: Number}
+    excursion_price: {type: Number},
+    // itinerary:{type: moongosee.Types.Object, ref: 'Itinerary', require: true}, 
 },{
     timestamps: true
 })

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import citiesRouter from "./citiesRouter.js";
-const indexRouter = Router();
 
+const indexRouter = Router();
 
 indexRouter.get("/", (request, response, next) => {
   console.log(request)
@@ -9,6 +9,7 @@ indexRouter.get("/", (request, response, next) => {
 });
 
 indexRouter.use("/cities", citiesRouter)
+// indexRouter.use("/itineraries",itinerariesRouter)
 
 
 export default indexRouter;
