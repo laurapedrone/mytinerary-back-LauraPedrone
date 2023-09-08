@@ -30,7 +30,7 @@ const citiesController = {
     let error = null;
     let success = true;
     try {
-      cities = await City.findOne({ _id: id }, req.body, { new: true });
+      cities = await City.findOne({ _id: id }, req.body, { new: true }).populate("itinerary");
 
       res.json({
         response: cities,
