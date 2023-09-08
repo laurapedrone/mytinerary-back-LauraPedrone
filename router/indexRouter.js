@@ -9,7 +9,6 @@ indexRouter.get("/", (request, response, next) => {
 });
 
 indexRouter.use("/cities", citiesRouter)
-// indexRouter.use("/itineraries",itinerariesRouter)
 
 
 export default indexRouter;

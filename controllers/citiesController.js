@@ -1,15 +1,16 @@
 // import cities from "../cities.js";
-import City from "../Models/City.js";
+import {City, Itinerary} from "../Models/City.js";
 
 const citiesController = {
-  getAllCities: async (request, response, next) => {
+  //Traer todas las ciudades
+  getAllCities: async (req, res, next) => {
     let allCity;
     let error = null;
     let success = true;
     try {
       allCity = await City.find();
 
-      response.json({
+      res.json({
         response: allCity,
         success,
         error,
@@ -22,66 +23,97 @@ const citiesController = {
     }
   },
 
-  
+  //Traer una ciudad por su id
   getOneCity: async (req, res, next) => {
-    const { id } = req.params
+    const { id } = req.params;
     let cities;
     let error = null;
     let success = true;
-    try{
-      cities = await City.findOne({_id : id}, req.body, {new: true})
+    try {
+      cities = await City.findOne({ _id: id }, req.body, { new: true });
 
       res.json({
         response: cities,
         success,
         error,
       });
-    }catch(err){
+    } catch (err) {
       success: false;
       error: err;
       next(err);
     }
   },
 
-  createOneCity: async (request, response, next) => {
-    console.log(request.body);
+  //Crear una ciudad
+  createOneCity: async (req, res, next) => {
+    console.log(req.body);
     let city;
     let error = null;
     let success = true;
     try {
-      city = await City.create(request.body);
+      const city = await City.create(req.body);
       console.log(city);
 
       //Es lo mismo que esto:
-      //const newCity = new City(request.body)
-      //await newCity.save()
-      //console.log(newCity)
+      // const city = new City(req.body);
+      // await city.save();
+
+      res.json({
+        city,
+        success,
+        error,
+      });
+
     } catch (err) {
-      console.log(err);
       success: false;
       error: err;
+      next(err);
     }
-    response.json({
-      response: city,
-      success,
-      error,
-    });
+
+  },
+
+  //Crear un nuevo Itinerario
+  createOneItinerary: async (req, res, next) => {
+    console.log(req.body);
+    const {id} = req.params
+    let itinerary;
+    let error = null;
+    let success = true;
+    try {
+      const itinerary = new Itinerary(req.body);
+      await itinerary.save();
+      const city = await City.findOneAndUpdate({_id:id},{$push: {itinerary: itinerary._id}},{new: true})
+      res.json({
+        itinerary,
+        city,
+        success,
+        error,
+      });
+
+    } catch (err) {
+      success: false;
+      error: err;
+      next(err);
+    }
+
   },
 
   updateOneCity: async (req, res, next) => {
-    const { id } = req.params
+    const { id } = req.params;
     let cities;
     let error = null;
     let success = true;
-    try{
-      cities = await City.findOneAndUpdate({_id : id}, req.body, {new: true})
+    try {
+      cities = await City.findOneAndUpdate({ _id: id }, req.body, {
+        new: true,
+      });
 
       res.json({
         response: cities,
         success,
         error,
       });
-    }catch(err){
+    } catch (err) {
       success: false;
       error: err;
       next(err);
@@ -90,25 +122,26 @@ const citiesController = {
   },
 
   deleteOneCity: async (req, res, next) => {
-    const { id } = req.params
+    const { id } = req.params;
     let cities;
     let error = null;
     let success = true;
-    try{
-      cities = await City.findOneAndDelete({_id : id}, req.body, {new: true})
+    try {
+      cities = await City.findOneAndDelete({ _id: id }, req.body, {
+        new: true,
+      });
 
       res.json({
         response: cities,
         success,
         error,
       });
-    }catch(err){
+    } catch (err) {
       success: false;
       error: err;
       next(err);
     }
   },
-
 };
 
 export default citiesController;
