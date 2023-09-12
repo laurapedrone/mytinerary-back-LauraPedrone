@@ -4,6 +4,7 @@ import indexRouter from "./router/indexRouter.js"
 import cors from "cors"
 import './config/database.js'
 import errorHandler from './middleware/errorHandler.js'
+import notFoundError from './middleware/notFoundHandler.js'
 
 const server = express()
 
@@ -21,5 +22,8 @@ server.use('/api/',(req,res,next)=>{
 server.get('/',(request, response, next)=>{
     response.send('Bienvenidos a mi servidor')
 })
+
+server.use(errorHandler)
+server.use(notFoundError)
 
 server.listen(process.env['PORT'], ()=>{console.log('Servidor corriendo en puerto ' + process.env['PORT'])})
