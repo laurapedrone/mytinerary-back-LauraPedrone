@@ -27,6 +27,9 @@
     "joi": "^17.10.1",
     "joi-oid": "^1.1.2",
     "joi-password-complexity": "^5.2.0",
-    "mongoose": "^7.5.0"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
   }
 }

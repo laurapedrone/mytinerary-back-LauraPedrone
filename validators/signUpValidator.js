@@ -18,22 +18,21 @@ export const signUpSchema = joi.object({
   password: joiPwd(complexityOptions).required().messages({
     "any.required": "Password is a required field.",
   }),
-  name: joi.string().alphanum().min(3).max(16).required().messages({
+  firstName: joi.string().alphanum().min(3).max(16).required().messages({
     "string.base": "Name should be a type of 'text'.",
     "string.empty": "Name cannot be an empty field.",
     "string.min": "Name should have a minimum length of 3.",
     "any.required": "Name is a required field.",
   }),
-  surname: joi.string().alphanum().min(3).max(16).required().messages({
+  lastName: joi.string().alphanum().min(3).max(16).required().messages({
     "string.base": "Surname should be a type of 'text'.",
     "string.empty": "Surname cannot be an empty field.",
     "string.min": "Surname should have a minimum length of 3.",
     "any.required": "Surname is a required field.",
   }),
   photoURL: joi.string().uri(),
-  country: joi.string().required().messages({
+  country: joi.string().messages({
     "string.base": "Country should be a type of 'text'.",
-    "any.required": "Country is a required field.",
   }),
   verified: joi.boolean(),
 });
