@@ -11,10 +11,11 @@ const {signUp, signIn, loginWithToken} = authController;
 
 //
 //
-authRouter.post("/",validator(signUpSchema), emailExists, signUp);
-authRouter.get("/in", validator(signInSchema), signIn)
+authRouter.post("/up",validator(signUpSchema), emailExists, signUp);
+authRouter.post("/in", validator(signInSchema), signIn)
 authRouter.get("/token", passport.authenticate('jwt',{session:false}), loginWithToken)
 
 export default authRouter;
+
 
 

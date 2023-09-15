@@ -40,33 +40,37 @@ const authController = {
         throw new Error("The email/password is incorrect");
       }
 
-      let { email, photoURL, country } = userInDB;
-      const token = jwt.sign({ email, photoURL }, process.env.SECRET_KEY, {
-        expiresIn: "1h",
-      });
+      let { email, photoURL, firstName } = userInDB;
+      const token = jwt.sign(
+        { email, photoURL, firstName },
+        process.env.SECRET_KEY,
+        {
+          expiresIn: "1h",
+        }
+      );
 
       return res.status(200).json({
         success: true,
-        userData: { email, photoURL, country },
+        userData: { email, photoURL, firstName },
         token: token,
         message: "Sign In successfully",
       });
     } catch (err) {
       console.log(err);
       res.status(500).json({
-        error:err})
+        error: err,
+      });
     }
   },
-  loginWithToken: async(req, res) =>{
-    console.log(req.user)
-
+  loginWithToken: async (req, res) => {
+    console.log(req.user);
+    const { email, photoURL, firstName } = req.user;
     res.status(200).json({
       success: true,
-      userData: req.user,
+      userData: { email, photoURL, firstName },
       message: "Sign In successfully",
-
     });
-  }
+  },
 };
 
 export default authController;
